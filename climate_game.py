@@ -91,24 +91,24 @@ else:
     total_carbon_footprint = total_carbon_footprint + 18
     
 #ask the student how they dry their clothes
-dryclothes = get_input("How do you dry clothes? (Enter 1 - hang to dry, 2 - dryer, 3 - both)", ["y","n"])
-if dryclothes == "1":
-    print("Good job, you are reducing your carbon footprint and getting exercise.")
+dry_clothes = get_input("How do you dry clothes? (Enter 1 - hang to dry, 2 - dryer, 3 - both)", ["1","2","3"])
+if dry_clothes == "1":
+    print("Good job, you are reducing your carbon footprint.")
     #does not add to the carbon footprint so no calculation required on this line
-elif dryclothes == "2":
-    print("Good job, you are reducing your carbon footprint and getting exercise.")
+elif dry_clothes == "2":
+    print("Good job, you are reducing your carbon footprint.")
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 750
-elif dryclothes == "3":
-    print("Not great but maybe next time try carpooling or a bike.")
+elif dry_clothes == "3":
+    print("Not great, but better.")
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 375
 
 #ask the student if they leave the water running when brushing their teeth
-teeth = get_input("Do you turn off the water when brushing your teeth. Enter y or n: ", ["y","n"])
+teeth = get_input("Do you turn off the water when brushing your teeth? Enter y or n: ", ["y","n"])
 if teeth == "y":
     print("Good job, you are saving energy.")
-    #recalculates the total_carbon_footprint
+    # ~ #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 34
 else:
     print("That's too bad try remembering to turn them off next time. ")
@@ -116,7 +116,7 @@ else:
     total_carbon_footprint = total_carbon_footprint + 274
 
 #ask the student if they leave the tv on    
-tv = get_input("Do you turn off the TV when you’re not watching it?. Enter y or n: ", ["y","n"])
+tv = get_input("Do you turn off the TV when you’re not watching it? Enter y or n: ", ["y","n"])
 if tv == "y":
     print("Good job, you are saving energy.")
     #recalculates the total_carbon_footprint
@@ -136,7 +136,7 @@ else:
     print("That's too bad try recycling can reduce your carbon footprint by 105. ")
 
 #ask the student if they recycle plastic
-recycle_plastic = get_input("Do you recycle paper/magazines? Enter y or n: ", ["y","n"])
+recycle_plastic = get_input("Do you recycle plastic? Enter y or n: ", ["y","n"])
 if recycle_plastic == "y":
     print("Good job, you are reducing your carbon footprint.")
     #recalculates the total_carbon_footprint
@@ -145,17 +145,16 @@ else:
     print("That's too bad try recycling can reduce your carbon footprint by 19. ")
 
 #ask the student if they recycle glass    
-recycle_paper = get_input("Do you recycle paper/magazines? Enter y or n: ", ["y","n"])
-if recycle_paper == "y":
+recycle_glass = get_input("Do you recycle glass? Enter y or n: ", ["y","n"])
+if recycle_glass == "y":
     print("Good job, you are reducing your carbon footprint.")
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint - 7
 else:
     print("That's too bad try recycling can reduce your carbon footprint by 7. ")
 
-
 #ask the student if they recycle aluminum
-recycle_aluminum = get_input("Do you recycle paper/magazines? Enter y or n: ", ["y","n"])
+recycle_aluminum = get_input("Do you recycle aluminum? Enter y or n: ", ["y","n"])
 if recycle_aluminum == "y":
     print("Good job, you are reducing your carbon footprint.")
     #recalculates the total_carbon_footprint
