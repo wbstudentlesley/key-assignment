@@ -2,7 +2,8 @@
 
 #use a function to display separator at various locations
 def separator():
-	print("*" * 80)
+	print("*" * 100)
+	print()
 	
 #use a function for each question and checks for valid input
 def get_input(prompt, valid_values):
@@ -32,7 +33,7 @@ total_carbon_footprint = 0
 
 separator()
 
-#ask the student how they get to school
+#ask the student how they get to school / uses an array to determine input options
 transportation = get_input("How do you get to school? (Enter 1 for walk, 2 for bike, 3 for car, 4 for bus, 5 carpool) ", ["1","2","3","4","5"])
 if transportation == "1":
     print("Good job, you are reducing your carbon footprint and getting exercise.")
@@ -53,7 +54,9 @@ elif transportation == "5":
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 459
     
-#ask the student what is the main type of food they eat
+separator()    
+
+#ask the student what is the main type of food they eat / uses an array to determine input options
 eat = get_input("Do you eat mostly - 1 meat, 2 vegetables, 3 bread?", ["1","2","3"])
 if eat == "1":
     print("Did you know eating mean can add 644 to your carbon footprint. On average, beef and lamb production have the highest carbon footprints of all the foods. Find out more at https://sustainability.psu.edu/wp-content/uploads/2020/09/ReducingDiningReport.pdf")
@@ -68,7 +71,9 @@ elif eat == "3":
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 364
 
-#ask the student if they turn off their lights 
+separator()
+
+#ask the student if they turn off their lights / uses an array to determine input options
 lights = get_input("Do you turn off the lights when you leave the room? Enter y or n: ", ["y","n"])
 if lights == "y":
     print("Good job, you are saving energy.")
@@ -79,7 +84,9 @@ else:
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 268
 
-#ask the student if they unplug appliances  
+separator()
+
+#ask the student if they unplug appliances  / uses an array to determine input options
 unplug = get_input("Do you unplug appliances/chargers when not in use? Enter y or n: ", ["y","n"])
 if unplug == "y":
     print("Good job, you are saving energy.")
@@ -89,7 +96,9 @@ else:
     print("That's too bad. The energy costs of plugged-in appliances can really add up, and unplugging these devices could save you up to $100 to $200 a year. https://blog.directenergy.com/should-you-unplug-appliances-when-not-in-use/. ")
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 18
-    
+
+separator()
+ 
 #ask the student how they dry their clothes
 dry_clothes = get_input("How do you dry clothes? (Enter 1 - hang to dry, 2 - dryer, 3 - both)", ["1","2","3"])
 if dry_clothes == "1":
@@ -104,6 +113,8 @@ elif dry_clothes == "3":
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 375
 
+separator()
+
 #ask the student if they leave the water running when brushing their teeth
 teeth = get_input("Do you turn off the water when brushing your teeth? Enter y or n: ", ["y","n"])
 if teeth == "y":
@@ -114,6 +125,8 @@ else:
     print("That's too bad try remembering to turn them off next time. ")
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 274
+
+separator()
 
 #ask the student if they leave the tv on    
 tv = get_input("Do you turn off the TV when you’re not watching it? Enter y or n: ", ["y","n"])
@@ -126,6 +139,8 @@ else:
     #recalculates the total_carbon_footprint
     total_carbon_footprint = total_carbon_footprint + 140
 
+separator()
+
 #ask the student if they recycle paper
 recycle_paper = get_input("Do you recycle paper/magazines? Enter y or n: ", ["y","n"])
 if recycle_paper == "y":
@@ -134,6 +149,8 @@ if recycle_paper == "y":
     total_carbon_footprint = total_carbon_footprint - 105
 else:
     print("That's too bad try recycling can reduce your carbon footprint by 105. ")
+
+separator()
 
 #ask the student if they recycle plastic
 recycle_plastic = get_input("Do you recycle plastic? Enter y or n: ", ["y","n"])
@@ -144,6 +161,8 @@ if recycle_plastic == "y":
 else:
     print("That's too bad try recycling can reduce your carbon footprint by 19. ")
 
+separator()
+
 #ask the student if they recycle glass    
 recycle_glass = get_input("Do you recycle glass? Enter y or n: ", ["y","n"])
 if recycle_glass == "y":
@@ -153,6 +172,8 @@ if recycle_glass == "y":
 else:
     print("That's too bad try recycling can reduce your carbon footprint by 7. ")
 
+separator()
+
 #ask the student if they recycle aluminum
 recycle_aluminum = get_input("Do you recycle aluminum? Enter y or n: ", ["y","n"])
 if recycle_aluminum == "y":
@@ -161,6 +182,7 @@ if recycle_aluminum == "y":
     total_carbon_footprint = total_carbon_footprint - 86
 else:
     print("That's too bad try recycling can reduce your carbon footprint by 86. ")
+
 separator()
 
 #prints the final value of the students total carbon footprint
